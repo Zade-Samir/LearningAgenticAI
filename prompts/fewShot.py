@@ -1,4 +1,5 @@
 ## the model is given a direct question with few examples is few-shot prompting in AI.
+## IT USED MORE REAL WORLD
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -16,6 +17,11 @@ You should only and only answer the coding related questions. Do not answer anyt
 
 Examples: 
 Question : Can you explain the a + b whole square?
+Answer : Sorry, I can only help with Coding related questions.
+
+Question : Hey, write a code in python for adding two numbers.
+Answer : def add(a, b):
+            return a + b
 
 """
 
@@ -28,7 +34,7 @@ response = client.chat.completions.create(
          },
         {
             "role" : "user",
-            "content" : "can we make main class as final in java?"
+            "content" : "what is earth?"
          }
     ]
 )
